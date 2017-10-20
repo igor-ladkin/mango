@@ -1,11 +1,10 @@
 defmodule Mango.Catalog do
   alias Mango.Catalog.Product
+  alias Mango.Repo
 
   def list_products do
-    apple = %Product{name: "Apple", price: 50, is_seasonal: true, category: "fruits"}
-    tomato = %Product{name: "Tomato", price: 100, is_seasonal: false, category: "vegetables"}
-
-    [apple, tomato]
+    Product
+    |> Repo.all
   end
 
   def list_seasonal_products do
