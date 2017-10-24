@@ -29,8 +29,8 @@ defmodule MangoWeb.Acceptance.CartTest do
   test "add to cart" do
     navigate_to("/")
 
-    [product, _rest] = find_all_elements(:css, ".product-thumbnail")
-    product_name = find_within_element(product, :name, "product[name]") |> attribute_value("value")
+    [product, _rest] = find_all_elements(:css, ".product.thumbnail")
+    product_name = find_within_element(product, :name, "cart[product_name]") |> attribute_value("value")
     pack_size = find_within_element(product, :name, "cart[pack_size]") |> attribute_value("value")
 
     find_within_element(product, :name, "cart[quantity]") |> fill_field(2)
