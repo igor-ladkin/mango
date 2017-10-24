@@ -31,6 +31,8 @@ defmodule MangoWeb.Router do
     delete "/logout", SessionController, :delete
 
     post "/cart", CartController, :add
+    get "/cart", CartController, :show
+    put "/cart", CartController, :update
   end
 
   # Other scopes may use custom stacks.
