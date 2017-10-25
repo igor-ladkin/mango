@@ -24,14 +24,14 @@
             <%= number_input lf, :quantity %>
             <%= error_tag lf, :quantity %>
           </td>
-          <td>INR <%= lf.data.unit_price %></td>
-          <td>INR <%= lf.data.total %></td>
+          <td>₹ <%= lf.data.unit_price %></td>
+          <td>₹ <%= lf.data.total %></td>
           <td><%= checkbox lf, :delete %></td>
         </tr>
         <% end %>
         <tr>
           <td colspan=4>Order Total</td>
-          <td>INR <%= @cart.total %></td>
+          <td>₹ <%= @cart.total %></td>
           <td></td>
         </tr>
       </tbody>
